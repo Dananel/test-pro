@@ -1,4 +1,4 @@
-package com.txd.servletexample;
+package com.txd.servletexample.servlet;
 
 import java.io.IOException;
 

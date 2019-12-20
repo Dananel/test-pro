@@ -3,9 +3,20 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
+	<!-- 1:filter配置在servlet之前
+	     2：filter执行属性，和配置顺序一致 -->
+	<filter>
+		<filter-name>customFilter</filter-name>
+		<filter-class>com.txd.servletexample.filter.CustomFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>customFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
 	<servlet>
 		<servlet-name>customServlet</servlet-name>
-		<servlet-class>com.txd.servletexample.CustomServlet</servlet-class>
+		<servlet-class>com.txd.servletexample.servlet.CustomServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>customServlet</servlet-name>
