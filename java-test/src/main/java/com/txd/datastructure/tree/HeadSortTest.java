@@ -8,7 +8,6 @@ import java.util.Arrays;
 public class HeadSortTest {
 
     public static void main(String[] args) {
-
         int[] arr = {13,12,15,10,11,7,14,9,8,6,5,1,2,3,4};
         getAesArr(arr);
         System.out.println(Arrays.toString(arr));

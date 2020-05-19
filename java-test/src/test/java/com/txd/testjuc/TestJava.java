@@ -2,6 +2,8 @@ package com.txd.testjuc;
 
 import org.junit.Test;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 /**
  * 测试
  */
@@ -10,13 +12,16 @@ public class TestJava {
     @Test
     public void test1() {
 
-        int[] arr ={1,2,3,4,5};
+        AtomicInteger atomicInteger = new AtomicInteger(0);
+        int andIncrement = atomicInteger.getAndIncrement();
+        System.out.println(atomicInteger);
+    }
 
-        int temp = arr[0];
+    @Test
+    public void testThreadInterrupt(){
+        Thread thread = Thread.currentThread();
+        thread.interrupt();
 
-        arr[0] = 3;
-
-        System.out.println(temp);
-
+        System.out.println(thread.isInterrupted());
     }
 }

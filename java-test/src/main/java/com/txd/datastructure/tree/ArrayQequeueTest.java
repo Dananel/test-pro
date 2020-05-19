@@ -6,11 +6,8 @@ import java.util.Deque;
 public class ArrayQequeueTest {
 
     public static void main(String[] args) {
-
-        Deque dequeeque = new ArrayDeque<String>();
-
-        dequeeque.addFirst("123");
-
-
+        Deque dequeue = new ArrayDeque<String>();
+        dequeue.addFirst("123");
     }
+
 }
