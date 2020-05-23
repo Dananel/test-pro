@@ -1,6 +1,7 @@
 package com.txd.xmlconfig;
 
 import com.txd.model.Student;
+import com.txd.modle.Person;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -18,7 +19,7 @@ public class XmlConfigTest {
     @Test
     public void init() {
         context = new ClassPathXmlApplicationContext("application.xml");
-        Student student = (Student)context.getBean("student");
+        Person student = (Person)context.getBean("person");
         System.out.println(student);
     }
 }
