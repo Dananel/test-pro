@@ -1,4 +1,4 @@
-package com.txd;
+package com.txd.mybatistest;
 
 import com.txd.mybatis.MybatisConfig;
 import com.txd.mybatis.dao.TestDao;
