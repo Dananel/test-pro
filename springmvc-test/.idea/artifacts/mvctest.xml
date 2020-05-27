@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="mvctest">
+    <output-path>$PROJECT_DIR$/out/artifacts/mvctest</output-path>
+    <root id="root" />
+  </artifact>
+</component>

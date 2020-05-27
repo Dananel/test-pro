@@ -1,7 +1,9 @@
 package com.txd.executor;
 
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 /**
  * 测试线程池
@@ -21,5 +23,18 @@ public class TestExecutors {
         executorService.execute(() -> {
             System.out.println("close");
         });
+    }
+
+    public void testNewCachedThreadPool() throws ExecutionException, InterruptedException {
+        ExecutorService service = Executors.newCachedThreadPool();
+        Future<String> future = service.submit(() -> {
+            return "123";
+        });
+
+        // 阻塞
+        String ss = future.get();
+
+        System.out.println(ss);
+
     }
 }
