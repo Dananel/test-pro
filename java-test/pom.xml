@@ -34,6 +34,16 @@
       <scope>provided</scope>
     </dependency>
 
+    <!--zk客户端-->
+    <!-- https://mvnrepository.com/artifact/com.101tec/zkclient -->
+    <dependency>
+      <groupId>com.101tec</groupId>
+      <artifactId>zkclient</artifactId>
+      <version>0.11</version>
+    </dependency>
+
+
+
   </dependencies>
 
 </project>
