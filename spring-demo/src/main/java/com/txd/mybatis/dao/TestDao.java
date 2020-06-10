@@ -18,4 +18,11 @@ public class TestDao {
     public void test(){
         System.out.println(testMapper.query());
     }
+
+    /**
+     * testMapper: jdk动态代理产生
+     */
+    public void test2(){
+        System.out.println(testMapper.query());
+    }
 }

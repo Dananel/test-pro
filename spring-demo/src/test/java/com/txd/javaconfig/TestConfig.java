@@ -30,4 +30,10 @@ public class TestConfig {
     public void getStudent(){
         System.out.println(context.getBean("getStudent"));
     }
+
+    @Test
+    public void testPropertyResouse(){
+        System.out.println(context.getBean("testproperties"));
+
+    }
 }
