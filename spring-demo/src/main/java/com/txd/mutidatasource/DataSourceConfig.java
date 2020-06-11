@@ -11,7 +11,7 @@ import java.util.Hashtable;
 /**
  * 注入多个数据源
  */
-@Configuration
+//@Configuration
 public class DataSourceConfig {
 
     @Bean("datasource1")

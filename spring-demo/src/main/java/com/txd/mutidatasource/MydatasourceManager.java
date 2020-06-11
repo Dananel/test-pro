@@ -12,11 +12,11 @@ import java.util.Map;
  */
 public class MydatasourceManager extends AbstractRoutingDataSource {
 
-    private DatasourceChangeUtil DatasourceChangeUtil;
+    private DatasourceChangeUtil datasourceChangeUtil;
 
     @Override
     protected Object determineCurrentLookupKey() {
-        return DatasourceChangeUtil.getDataSourceKey();
+        return datasourceChangeUtil.getDataSourceKey();
     }
 
     @Override
@@ -24,7 +24,11 @@ public class MydatasourceManager extends AbstractRoutingDataSource {
         super.setTargetDataSources(targetDataSources);
     }
 
-    public void setDatasourceChangeUtil(com.txd.mutidatasource.DatasourceChangeUtil datasourceChangeUtil) {
-        DatasourceChangeUtil = datasourceChangeUtil;
+    public void setDatasourceChangeUtil(DatasourceChangeUtil datasourceChangeUtil) {
+        this.datasourceChangeUtil = datasourceChangeUtil;
+    }
+
+    public DatasourceChangeUtil getDatasourceChangeUtil() {
+        return datasourceChangeUtil;
     }
 }
