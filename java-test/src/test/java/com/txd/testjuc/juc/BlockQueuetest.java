@@ -45,4 +45,11 @@ public class BlockQueuetest {
 
 
     }
+
+    @Test
+    public void testSynchronizedQueue() throws InterruptedException {
+        // 如果一个线程生产的消息没被消费，这个线程就阻塞，直到被消费，才可以继续生产
+        BlockQueueTest blockQueueTest = new BlockQueueTest();
+        blockQueueTest.testSynchronizedQueue();
+    }
 }

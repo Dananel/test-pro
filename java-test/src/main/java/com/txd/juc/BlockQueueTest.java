@@ -1,6 +1,9 @@
 package com.txd.juc;
 
+import lombok.SneakyThrows;
+
 import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.SynchronousQueue;
 
 /**
  * 阻塞队列测试
@@ -18,5 +21,29 @@ public class BlockQueueTest {
         Thread.currentThread().interrupt();
 
         System.out.println(strings.take());
+    }
+    
+    public void testSynchronizedQueue() throws InterruptedException {
+        SynchronousQueue<String> queue = new SynchronousQueue<>();
+
+        new Thread(new Runnable() {
+            @SneakyThrows
+            @Override
+            public void run() {
+                System.out.println("线程1========put=="+1);
+                queue.put("1");
+            }
+        }).start();
+
+        new Thread(new Runnable() {
+            @SneakyThrows
+            @Override
+            public void run() {
+                System.out.println("线程2========put=="+2);
+                queue.put("2");
+            }
+        }).start();
+
+        Thread.sleep(10000000);
     }
 }
