@@ -74,6 +74,21 @@
       <version>2.0.5</version>
     </dependency>
 
+    <!--rabbitmq客户端-->
+    <dependency>
+      <groupId>com.rabbitmq</groupId>
+      <artifactId>amqp-client</artifactId>
+      <version>5.9.0</version>
+    </dependency>
+
+    <!--redis客户端-->
+    <dependency>
+      <groupId>redis.clients</groupId>
+      <artifactId>jedis</artifactId>
+      <version>3.3.0</version>
+    </dependency>
+
+
 
 
   </dependencies>

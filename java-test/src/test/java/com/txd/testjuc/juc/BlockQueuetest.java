@@ -31,17 +31,25 @@ public class BlockQueuetest {
     }
 
     @Test
-    public  void test(){
+    public  void test() throws InterruptedException {
         SynchronousQueue<String> queue = new SynchronousQueue<>(true);
-        queue.offer("123");
+        new Thread(()->{
+            try {
+                queue.put("123");
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }).start();
 
-        queue.offer("123");
-        queue.offer("123");
+        Thread.sleep(10000);
 
-        queue.offer("123");
-        queue.offer("123");
-
-        queue.offer("123");
+        new Thread(()->{
+            try {
+                queue.take();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }).start();
 
 
     }
